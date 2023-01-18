@@ -47,6 +47,8 @@ $ npm i -D @types/node ts-proto
 #### Installing prerequisite and accessing Proto Repository
 $ npm install
 $ npm run proto:install
+
+#### after building the different images ,  we will run docker compose file
 ```
 
 Design Patterns used :
