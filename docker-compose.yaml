@@ -1,0 +1,74 @@
+version: '3'
+services:
+  application:
+    image: application-svc
+    restart: always
+    hostname: application
+    networks:
+      - backend
+    environment:
+      HOSTDB: "db1"
+      HOSTOFFER: "offer"
+      PASSDB: "123"
+    ports:
+      - 50052:50052
+    depends_on:
+      - db1
+      - offer
+  db1:
+    image: postgres
+    restart: always
+    hostname: db1
+    networks:
+      - backend
+    environment:
+      POSTGRES_PASSWORD: '123'
+    ports:
+      - 5432:5432
+    volumes:
+      - ./pgdata:/var/lib/postgresql/data:Z
+  gateway:
+    image: gateway-svc
+    restart: always
+    hostname: gateway
+    networks:
+      - backend
+    environment:
+      HOSTAPP: "application"
+      HOSTAUTH: "auth"
+      HOSTOFFER: "offer"
+    ports:
+      - 3000:3000
+    depends_on:
+      - application
+      - auth
+      - offer
+  auth:
+    image: auth-svc
+    restart: always
+    hostname: auth
+    networks:
+      - backend
+    environment:
+      HOSTDB: "db1"
+      PASSDB: "123"
+    ports:
+      - 50051:50051
+    depends_on:
+      - db1
+  offer:
+    image: offer-svc
+    restart: always
+    hostname: offer
+    networks:
+      - backend
+    environment:
+      HOSTDB: "db1"
+      PASSDB: "123"
+    ports:
+      - 50053:50053
+    depends_on:
+      - db1
+
+networks:
+  backend:
