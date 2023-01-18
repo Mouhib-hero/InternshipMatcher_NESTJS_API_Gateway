@@ -1,74 +1,64 @@
-[<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
-</p>
+NestJS | Microservices | gRPC | API Gateway | seperate databases
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
-
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+API Gateway service for the InternshipMatcher project
 
 ## Description
+InternshipMatcher is a web application backend that matches students with copmanies offering end of studies internships
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+Key words: NestJS , Microservices , gRPC , API Gateway , seperate databases.
+
+## Useful links
+
+you can find the rest of the services here:
+
+[https://github.com/mpoyd/InternshipMatcher_NESTJS_gRPC_AUTH](https://github.com/mpoyd/InternshipMatcher_NESTJS_gRPC_AUTH) :Authentification microservice
+
+[https://github.com/ayadi-mohamed/InternshipMatcher_NESTJS_gRPC_APPLICATION](https://github.com/ayadi-mohamed/InternshipMatcher_NESTJS_gRPC_APPLICATION) :Application microservice
+
+[https://github.com/Souha-LOULOU/InternshipMatcher_NESTJS_gRPC_OFFER](https://github.com/Souha-LOULOU/InternshipMatcher_NESTJS_gRPC_OFFER) :Offer microservice
+
+[https://github.com/Mouhib-hero/InternshipMatcher_NESTJS_API_Gateway](https://github.com/Mouhib-hero/InternshipMatcher_NESTJS_API_Gateway) :API Gateway
+
+[https://github.com/ayadi-mohamed/grpc-nest-proto](https://github.com/ayadi-mohamed/grpc-nest-proto) :Shared Proto Repository
+
+
+## Microservices Design
+![image](https://i.ibb.co/WHTySCg/design.png)
+
+```bash
+Authentification microservice: Handles the Register and Login process
+Offer microservice : Employers can offer internships
+Application microservice : Students can search and apply for internships
+API Gateway : Handles all the API calls and sits between all the services and the client to ensure and provide a secured and organized API-based integrations.
+```
+
+Design Patterns used :
+
+microservices  | 
+API GATEWAY  | 
+seperate databases 
 
 ## Installation
-
 ```bash
+#### Dependencies
+$ npm i @nestjs/microservices @grpc/grpc-js @grpc/proto-loader
+$ npm i -D @types/node ts-proto
+
+#### Installing prerequisite and accessing Proto Repository
 $ npm install
+$ npm run proto:install
 ```
 
-## Running the app
+Design Patterns used :
 
-```bash
-# development
-$ npm run start
+microservices  | 
+API GATEWAY  | 
+seperate databases 
 
-# watch mode
-$ npm run start:dev
+## Authors
 
-# production mode
-$ npm run start:prod
-```
+Mehdi Jerbi  |  
+Mohamed Ayadi  |  
+Souha Loulou  |  
+Mouhib Ben Jemaa
 
-## Test
-
-```bash
-# unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
-```
-
-## Support
-
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
-## License
-
-Nest is [MIT licensed](LICENSE).
-](https://github.com/Mouhib-hero/InternshipMatcher_NESTJS_API_Gateway)
