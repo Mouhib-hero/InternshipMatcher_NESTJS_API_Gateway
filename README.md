@@ -1,6 +1,6 @@
-NestJS | Microservices | gRPC | API Gateway | Docker | seperate databases
+NestJS | Microservices | gRPC | API Gateway | seperate databases
 
-API Gateway for the InternshipMatcher project
+API Gateway service for the InternshipMatcher project
 
 ## Description
 InternshipMatcher is a web application backend that matches students with copmanies offering end of studies internships
@@ -11,7 +11,7 @@ Key words: NestJS , Microservices , gRPC , API Gateway , seperate databases.
 
 you can find the rest of the services here:
 
-[https://github.com/mpoyd/InternshipMatcher_NESTJS_gRPC_AUTH](https://github.com/mpoyd/InternshipMatcher_NESTJS_gRPC_AUTH) :Authentication microservice
+[https://github.com/mpoyd/InternshipMatcher_NESTJS_gRPC_AUTH](https://github.com/mpoyd/InternshipMatcher_NESTJS_gRPC_AUTH) :Authentification microservice
 
 [https://github.com/ayadi-mohamed/InternshipMatcher_NESTJS_gRPC_APPLICATION](https://github.com/ayadi-mohamed/InternshipMatcher_NESTJS_gRPC_APPLICATION) :Application microservice
 
@@ -19,7 +19,7 @@ you can find the rest of the services here:
 
 [https://github.com/Mouhib-hero/InternshipMatcher_NESTJS_API_Gateway](https://github.com/Mouhib-hero/InternshipMatcher_NESTJS_API_Gateway) :API Gateway
 
-[https://github.com/ayadi-mohamed/grpc-nest-proto](https://github.com/ayadi-mohamed/grpc-nest-proto) :Shared Proto files
+[https://github.com/ayadi-mohamed/grpc-nest-proto](https://github.com/ayadi-mohamed/grpc-nest-proto) :Shared Proto Repository
 
 
 ## Microservices Design
@@ -47,8 +47,6 @@ $ npm i -D @types/node ts-proto
 #### Installing prerequisite and accessing Proto Repository
 $ npm install
 $ npm run proto:install
-
-#### after building the different images ,  we will run docker compose file
 ```
 
 Design Patterns used :
@@ -63,3 +61,4 @@ Mehdi Jerbi  |
 Mohamed Ayadi  |  
 Souha Loulou  |  
 Mouhib Ben Jemaa
+
