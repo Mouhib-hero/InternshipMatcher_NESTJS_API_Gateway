@@ -7,10 +7,7 @@ import {
 } from '@nestjs/terminus';
 import { PrometheusService } from '../prometheus/prometheus.service';
 import { HealthIndicator } from './interfaces/health-indicator.interface';
-import { AppSvcConnectivityHealthIndicator } from './models/app-svc-connectivity-health.indicator';
-import { AuthSvcConnectivityHealthIndicator } from './models/auth-svc-connectivity-health.indicator';
 import { NestjsHealthIndicator } from './models/nestjs-health.indicator';
-import { OfferSvcConnectivityHealthIndicator } from './models/offer-svc-connectivity-health.indicator';
 
 @Injectable()
 export class HealthService {
@@ -27,9 +24,6 @@ export class HealthService {
         'http://localhost:3001',
         this.promClientService
       ),
-      //new AppSvcConnectivityHealthIndicator(this.http,process.env.HOSTAPP, this.promClientService),
-      //new AuthSvcConnectivityHealthIndicator(this.http,process.env.HOSTAUTH, this.promClientService),
-      //new OfferSvcConnectivityHealthIndicator(this.http,process.env.HOSTOFFER, this.promClientService),
     ];
   }
 
